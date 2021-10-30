@@ -33,6 +33,7 @@ Download and then expand the data using:
 mkdir speech_data
 tar -xzf data_speech_commands_v0.02.tar.gz -C speech_data
 ```
+/usr/local/cuda-11.0/targets/x86_64-linux/lib/libcusolver.so.11
 
 For my training, I add a lot more data to the `_background_noise_` folder. I also created a `_problem_noise_` folder and recorded sounds that seemed to confuse the model - low frequency humming noises around 100Hz seem to cause problems.
 

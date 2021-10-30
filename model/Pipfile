@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+tensorflow = "*"
+matplotlib = "*"
+pandas = "*"
+numpy = "*"
+jupyter = "*"
+scipy = "*"
+tensorflow-io = "*"
+tqdm = "*"
+jupyter-contrib-nbextensions = "*"
+PyAudio = {path = "./PyAudio-0.2.11-cp39-cp39-win_amd64.whl"}
+jupyter_nbextensions_configurator = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
