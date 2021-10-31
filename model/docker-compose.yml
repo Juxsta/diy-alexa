@@ -1,0 +1,35 @@
+services:
+  alex-notebook:
+    container_name: alexa-notebook 
+    ports:
+      - 8888:8888
+      - 6006:6006
+    build: . 
+    volumes:
+      - ./:/tf
+    environment:
+      - GRANT_SUDO=yes
+      - JUPYTER_ENABLE_LAB=yes
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+  tf:
+    container_name: tf 
+    ports:
+      - 8888:8888
+      - 6006:6006
+    image: tensorflow/tensorflow:nightly-gpu
+    volumes:
+      - ./:/tf
+    environment:
+      - GRANT_SUDO=yes
+      - JUPYTER_ENABLE_LAB=yes
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    command: python  /tf/Train\ Model.py
+
