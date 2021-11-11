@@ -12,3 +12,8 @@ Read the original read me and download the speech_commands file from google and 
 
 I simplified the usage steps for docker and created a custom dockerfile included here. As long as docker is working properly all that needs to be done is to cd into this directory and run docker compose up. 
 
+```
+cd {Download Directory}/diy-alexa/model
+docker compose up
+```
+This will setup the environment and get a jupyter notebook running that can be immediately used to run the project. As a bonus, as long as the latest drivers for your gpu are installed (they probably are "geforce game ready drivers are enough") then passthrough should be flawless.
